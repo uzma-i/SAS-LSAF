@@ -1,0 +1,27 @@
+SAS LSAF 4.7 Workflow
+
+Step 1: log in to the Ondemand SAS LSAF from Citrix
+
+Step 2: Check Dashboard for tasks
+
+Step 3: Access source data.
+The study data files (objects) are located within the study (container).
+Find your study in the Repository. 
+Right click on the container and choose "Copy to workspace"
+
+Step 3: Create a library in the workspace.
+Open a SAS session and create a library using the following code. The macro variable &_gengh_ will resolve to user credentials and 
+
+Libname newhat " &_gengh_"filepathcopiedfromrepository";
+Run;
+
+Step 4: Here on, follow the SAS codes referencing the library newhat 
+
+Proc Freq data=newhat.ae;
+tables aesev;
+run;
+
+
+
+
+
