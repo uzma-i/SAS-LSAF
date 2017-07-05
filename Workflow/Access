@@ -10,7 +10,8 @@ Find your study in the Repository.
 Right click on the container and choose "Copy to workspace"
 
 Step 3: Create a library in the workspace.
-Open a SAS session and create a library using the following code. The macro variable &_gengh_ will resolve to user credentials and 
+Open a SAS session and create a library using the following code.
+The macro variable &_gengh_ will resolve to user credentials and validate.
 
 Libname newhat " &_gengh_"filepathcopiedfromrepository";
 Run;
